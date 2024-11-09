@@ -1,3 +1,14 @@
+import 'dart:io';
+
+import '../BookController.dart';
+
 class RemoveBook {
-  //TODO
+  void remove(){
+    stdout.write("\tEnter Book Title -> ");
+    String? title = stdin.readLineSync();
+
+    if(title!=null){
+      BookController().removeBook(title);
+    }
+  }
 }
